@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.apache.cordova.gpPrint"
+    version="0.0.1">
+    <name>GpPrint</name>
+    <description>Cordova GpPrint Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,gpPrint</keywords>
+    <repo>https://github.com/apache/cordova-plugin-device/tree/master/src</repo>
+  <!--  <issue>https://issues.apache.org/jira/browse/CB/component/12320648</issue>
+-->
+    <js-module src="www/gpPrint.js" name="gpPrint">
+        <clobbers target="gpPrint" />
+    </js-module>
+
+  
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="GpPrint" >
+                <param name="android-package" value="org.apache.cordova.gpPrint.GpPrint"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Build.java" target-dir="src/org/apache/cordova/gpPrint" />
+	    <source-file src="src/android/Financelist.java" target-dir="src/org/apache/cordova/gpPrint" />
+        <source-file src="src/android/GpPrint.java" target-dir="src/org/apache/cordova/gpPrint" />
+        <source-file src="src/android/GpStatus.java" target-dir="src/org/apache/cordova/gpPrint" />
+        <source-file src="src/android/Paper.java" target-dir="src/org/apache/cordova/gpPrint" />
+        <source-file src="src/android/RentInfo.java" target-dir="src/org/apache/cordova/gpPrint" />
+        <source-file src="src/android/UserInfo.java" target-dir="src/org/apache/cordova/gpPrint" />
+        <source-file src="src/android/RentItemList.java" target-dir="src/org/apache/cordova/gpPrint" />
+        <source-file src="src/android/Room.java" target-dir="src/org/apache/cordova/gpPrint" />
+		<source-file src="src/android/QRcodeCreater.java" target-dir="src/org/apache/cordova/gpPrint" />
+        <source-file src="libs/gprinter.jar" target-dir="libs" />
+		 <source-file src="libs/core-2.2.jar" target-dir="libs" />
+
+
+    </platform>
+
+   
+   
+
+    
+</plugin>
